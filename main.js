@@ -506,8 +506,8 @@ function renderLoop() {
       if (Math.abs(velocity.x) < 0.0001) velocity.x = 0;
       if (Math.abs(velocity.y) < 0.0001) velocity.y = 0;
       
-      // 【生物感の表現】デフォルトでゆっくりとY軸で自転する
-      cube.rotation.y += 0.005;
+      // 【生物感の表現】デフォルトでゆっくりとY軸で自転する（速度1/4）
+      cube.rotation.y += 0.00125;
     }
     
     // 移動の慣性と緩いバウンダリ
