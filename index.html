@@ -1,1 +1,21 @@
-hello!
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hand Tracking Cube</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <div id="app">
+      <video id="webcam" autoplay playsinline></video>
+      <canvas id="canvas3d"></canvas>
+      <div id="ui-layer">
+        <h1>Hand Tracking Cube</h1>
+        <p id="status">カメラの起動とモデルの読み込みを待っています...</p>
+        <p id="prediction" style="font-size: 22px; font-weight: bold; color: #4CAF50; margin-top: 15px; text-shadow: 1px 1px 3px rgba(0,0,0,0.8);"></p>
+      </div>
+    </div>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
