@@ -49,6 +49,8 @@ html, body {
   border-radius: 12px;
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
+  box-sizing: border-box;
+  max-width: calc(100vw - 40px); /* 画面外への見切れを防止 */
 }
 
 h1 {
@@ -61,4 +63,35 @@ p {
   margin: 0;
   font-size: 14px;
   color: #ccc;
+}
+
+#prediction {
+  font-size: 22px;
+  font-weight: bold;
+  color: #4CAF50;
+  margin-top: 15px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+}
+
+/* --- スマホ対応（レスポンシブ） --- */
+@media (max-width: 600px) {
+  #ui-layer {
+    top: 10px;
+    left: 10px;
+    padding: 10px 15px;
+    max-width: calc(100vw - 20px);
+  }
+  
+  h1 {
+    font-size: 18px;
+  }
+  
+  p#status {
+    font-size: 12px;
+  }
+  
+  #prediction {
+    font-size: 16px;
+    margin-top: 10px;
+  }
 }
